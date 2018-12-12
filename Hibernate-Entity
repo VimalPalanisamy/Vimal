@@ -1,0 +1,67 @@
+package entity;
+
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="orders")
+@Access(AccessType.FIELD)
+public class Order {
+	
+		@Id
+		
+		@Column(name="order_id",nullable=false)
+		String orderId;	
+		@Column(name="order_name",nullable=false)
+		String orderName;
+		@Column(name="product_name",nullable=false)
+		String proName;
+		
+		@Column(name="product_quantity",nullable=false)
+		int proQuantity;
+		@Column(name="product_price",nullable=false)
+		int proPrice;
+		
+		
+		public String getOrderId() {
+			return orderId;
+		}
+		public void setOrderId(String orderId) {
+			this.orderId = orderId;
+		}
+		public String getOrderName() {
+			return orderName;
+		}
+		public void setOrderName(String orderName) {
+			this.orderName = orderName;
+		}
+		
+		public String getProName() {
+			return proName;
+		}
+		public void setProName(String proName) {
+			this.proName = proName;
+		}
+		public int getProQuantity() {
+			return proQuantity;
+		}
+		public void setProQuantity(int proQuantity) {
+			this.proQuantity = proQuantity;
+		}
+		public int getProPrice() {
+			return proPrice;
+		}
+		public void setProPrice(int proPrice) {
+			this.proPrice = proPrice;
+		}
+		
+		
+		
+		
+}
